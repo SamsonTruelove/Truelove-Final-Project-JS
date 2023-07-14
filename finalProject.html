@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB-115 Final Project</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Build Your Meal Plan</h1>
+        <p>Your Name, WEB-115, Section Number</p>
+    </header>
+
+    <form id="mealForm">
+        <!-- User information section -->
+        <div class="userInfo">
+            <!-- Input field for user's name -->
+            <div class="inputGroup">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <!-- Input field for user's email -->
+            <div class="inputGroup">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- Input field for user's weekly goal -->
+            <div class="inputGroup">
+                <label for="goal">Goal for the week:</label>
+                <input type="text" id="goal" name="goal" required>
+            </div>
+        </div>
+        <!-- Meal plan section, which will be dynamically populated by JavaScript -->
+        <div class="mealPlan"></div>
+        <!-- Button to submit the form and generate the meal plan -->
+        <button type="submit">Generate Meal Plan</button>
+        <!-- Button to clear the form -->
+        <button type="button" id="clearButton">Clear</button>
+    </form>
+
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Link to the external JavaScript file -->
+    <script src="projectJS.js"></script>
+    
+</body>
+
+</html>

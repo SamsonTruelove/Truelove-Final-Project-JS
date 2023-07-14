@@ -1,0 +1,58 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #70adb5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header text styles */
+h1 {
+    font-size: 2.5em;
+}
+
+/* Form styles */
+form {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* User information section styles */
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Input group styles */
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+/* Label and input field styles */
+.inputGroup label,
+.inputGroup input {
+    margin-bottom: 10px;
+}
+
+/* Meal plan section styles */
+.mealPlan>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Button styles */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
