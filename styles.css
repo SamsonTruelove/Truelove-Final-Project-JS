@@ -1,58 +1,179 @@
-/* Basic page styles */
+/*-------------------------------------------------------
+Author: Samson Truelove
+Class: WEB-115-0003
+Date: 7/15/2023
+
+This is the CSS file for the Meal Plan Final Project.
+To be Used w/ finalProject.html
+-------------------------------------------------------*/
+
+/*--------------- Body Styles ---------------*/
+
 body {
     font-family: Arial, sans-serif;
+    background-image: url('dumbell-background.jpg');
+    /* Image Free Sourced: https://pixabay.com/photos/fitness-weight-dumbbell-gym-1882721/*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    letter-spacing: .25px;
 }
 
-/* Header styles */
+/*--------------- Header Styles ---------------*/
+
 header {
-    background-color: #70adb5;
-    color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(1px);
+    /* Added for Compatibility */
+    backdrop-filter: blur(1px);
+    /* Blur the background, not the text */
+    border-radius: 25px
 }
 
-/* Header text styles */
 h1 {
-    font-size: 2.5em;
+    /* This is the main title */
+    font-size: 3vw;
+    margin-bottom: -10px;
 }
 
-/* Form styles */
+p {
+    /* This is the subtitle */
+    font-size: 2vw;
+}
+
+#headerImage {
+    /*   This is the image in the header */
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 13vw;
+    height: auto;
+}
+
+/*----- Media query Applies when Viewport Width is 600px or Less -----*/
+
+@media (max-width: 600px) {
+    h1 {
+        /* This is the main title minimum font size */
+        font-size: 35px;
+        padding-left: 65px;
+    }
+
+    p {
+        /* This is the subtitle minimum font size */
+        font-size: 18px;
+        padding-left: 65px;
+    }
+
+    #headerImage {
+        /* This is the image in the header minimum size */
+        width: 120px;
+    }
+}
+
+/*---------------  Form Styles ---------------*/
+
 form {
-    margin: 0 auto;
-    width: 80%;
-}
-
-/* User information section styles */
-.userInfo {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-/* Input group styles */
-.inputGroup {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-
-/* Label and input field styles */
-.inputGroup label,
-.inputGroup input {
-    margin-bottom: 10px;
-}
-
-/* Meal plan section styles */
-.mealPlan>div {
+    /* This is the form container */
+    width: 33%;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 2%;
+    margin-top: 25px;
+    padding-top: 50px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(5px);
+    /* Added for Compatibility */
+    backdrop-filter: blur(1px);
+    /* Blurs the Background, Not the Text */
+    font-size: 20px;
+    border-radius: 25px
 }
 
-/* Button styles */
+.inputGroup {
+    /* This is the container for each input */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.inputGroup label {
+    /*  This is the label for each input */
+    width: 95px;
+}
+
+.inputGroup input {
+    /* This is the input field */
+    flex-grow: 1;
+}
+
+.inputGroup label,
+.inputGroup input {
+    /* This is the label and input field together */
+    margin-bottom: 10px;
+}
+
+.inputGroup.labelStyle label {
+    /* This is the label for the goal input */
+    -webkit-text-stroke-width: 0px;
+    /* Removes the black outline around the text */
+}
+
+.dayContainer h3 {
+    /* This is the day of the week */
+    text-align: center;
+}
+
+/*--------------- Goal/Label Input Styles ---------------*/
+
+.inputGroup.goal {
+    /* This is the container for the goal input */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inputGroup.goal textarea {
+    /* This is the goal input field */
+    width: 90%;
+    height: 100px;
+    align-self: center;
+}
+
+
+.inputGroup.goal label {
+    /* This is the label for the goal input */
+    white-space: nowrap;
+    text-align: center;
+    width: 100%;
+}
+
+/*---------------  Button Styles --------------- */
+
 button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: whitesmoke;
+    border-color: whitesmoke;
+    width: 75%;
+    margin: 5px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    /* This is the hover effect for the button */
+    background-color: rgba(0, 0, 0, 0.8);
 }

@@ -1,51 +1,84 @@
+<!-- 
+    Author: Samson Truelove
+    Class: WEB-115-0003
+    Date: 07/15/2023
+
+    This is the HTML File for the Meal Plan Final Project. 
+    Contains a Form for User Information / Uses JavaScript to Generate a Meal Plan w/ User Input.
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
     <title>WEB-115 Final Project</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
 
     <header>
+
+        <!-- Required Title -->
         <h1>Build Your Meal Plan</h1>
-        <p>Your Name, WEB-115, Section Number</p>
+
+        <!-- Name / Course / Section Number -->
+        <p>Samson Truelove, WEB-115-0003</p>
+
+        <!-- Header Image Created Source Free @ https://www.canva.com -->
+        <img src="Perfectly-Portioned-Fitness.png" alt="PPF Logo" id="headerImage">
+
     </header>
 
+    <!-- 
+        Form for User Input
+        Contains: Name, Email, Goal for the Week, Meal Plan
+
+        Meal Plan: Generated with JavaScript
+
+        Two Buttons: Generate Meal Plan, Clear
+
+        inputGroup Class: Styles All
+        labelStyle Class: Styles User Information Labels
+        Goal Class Styles: Goal for the Week Label/Text Area
+    -->
     <form id="mealForm">
-        <!-- User information section -->
-        <div class="userInfo">
-            <!-- Input field for user's name -->
-            <div class="inputGroup">
-                <label for="username">Name:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <!-- Input field for user's email -->
-            <div class="inputGroup">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <!-- Input field for user's weekly goal -->
-            <div class="inputGroup">
-                <label for="goal">Goal for the week:</label>
-                <input type="text" id="goal" name="goal" required>
-            </div>
+
+        <!-- Username Input -->
+        <div class="inputGroup labelStyle">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username">
         </div>
-        <!-- Meal plan section, which will be dynamically populated by JavaScript -->
+
+        <!-- Email Input w/ Requirement-->
+        <div class="inputGroup labelStyle">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Goal for the Week Input w/ Text Area-->
+        <div class="inputGroup goal labelStyle">
+            <label for="goal">Goal for the Week</label>
+            <textarea id="goal" name="goal"></textarea>
+        </div>
+
+        <!-- Meal Plan Generated with JavaScript (Contains Days/Meals) -->
         <div class="mealPlan"></div>
-        <!-- Button to submit the form and generate the meal plan -->
+
+        <!-- Buttons Generates Meal Plan / Clears Meal Plan Using JavaScript -->
         <button type="submit">Generate Meal Plan</button>
-        <!-- Button to clear the form -->
         <button type="button" id="clearButton">Clear</button>
+
     </form>
 
-    <!-- Include jQuery library -->
+    <!-- Scripts for Jquery and JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Link to the external JavaScript file -->
     <script src="projectJS.js"></script>
-    
+
 </body>
 
 </html>
